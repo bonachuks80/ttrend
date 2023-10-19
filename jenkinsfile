@@ -15,10 +15,10 @@ environment {
         }
     stage('SonarQube analysis') {
     environment {
-      scannerHome = tool 'bon-sonar-scanner'
+      scannerHome = tool 'bonachuks80-sonar-scanner'
     }
     steps {
-    withSonarQubeEnv('bon-sonarqube-server') { // If you have configured more than one global server connection, you can specify its name
+    withSonarQubeEnv('bonachuks80-sonarqube-server') { // If you have configured more than one global server connection, you can specify its name
       sh "${scannerHome}/bin/sonar-scanner"
     }
   }
